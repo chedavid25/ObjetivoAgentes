@@ -49,18 +49,22 @@ function calcularGestion() {
     let preListingAcmValor = parseFloat(preListingAcm.value)/100;
   
     // Calcular las gestiones y mostrar los resultados
-    let cantidadVentas = objetivoAnualValor / 3000
+    let comisionPromedio = ticketPromedioValor * 0.03;
+    let cantidadVentas = objetivoAnualValor / comisionPromedio;
     let cantidadCaptaciones = cantidadVentas / captacionVentaValor;
     let cantidadAcm = cantidadCaptaciones / acmCaptacionValor;
     let cantidadPreListing = cantidadAcm / preListingAcmValor;
   
     // Mostrar los resultados en los elementos correspondientes
-    respuestaCantidadVentas.textContent = `Cantidad de Ventas: ${cantidadVentas.toFixed(2)}`;
+    respuestaCantidadVentas.textContent = `Cantidad de Ventas: ${cantidadVentas.toFixed(2) }`;
     respuestaCantidadCaptaciones.textContent = `Cantidad de Captaciones: ${cantidadCaptaciones.toFixed(2)}`;
     respuestaCantidadAcm.textContent = `Cantidad de ACM: ${cantidadAcm.toFixed(2)}`;
     respuestaCantidadPreListing.textContent = `Cantidad de Pre-Listings: ${cantidadPreListing.toFixed(2)}`;
-  }
+  
+console.log(comisionPromedio.toFixed(2));
+}
   
   // Asignar la función al evento click del botón
   btnCalcularGestion.addEventListener('click', calcularGestion);
+
 
