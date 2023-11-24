@@ -68,6 +68,7 @@
 .inputs{
     max-width: 50%;
     
+    
 }
 
 .btnCalcularObjetivo{
@@ -93,4 +94,28 @@
 .respuestaInputs{
     font-size: 1.5rem;
     
+}
+
+.calculandoEfectividades p{
+    font-size: 1.3rem;
+    padding: 1rem 4rem 0 4rem;
+}
+
+.calculandoEfectividades{
+    padding: 4rem 4rem 4rem 4rem;
+}
+
+
+.contenedorResultados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+    background-color: #FF7E00;
+    color: white;
+    border-radius: 1rem;
+    padding: 3rem;
+
 }
